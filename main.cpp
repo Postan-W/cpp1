@@ -1,7 +1,10 @@
 #include <iostream>
 #include<vector>
 #include<typeinfo>
-
+#include <windows.h>
+#include "algorithm.h"
+#include "function.h"
+#include "cpp_class.h"
 //引入命名空间中的名字，否则的话使用时要带上命名空间名，如std::cin
 using std::cin;
 using std::cout;
@@ -54,6 +57,11 @@ void string_iter(){
 //    *it_s3 = 'H';不可行，因为s3是const的，所以it_s3被定义为const的
 //    string::iterator it_s33 = s3.begin();显式定义为非const的将报错
     string::const_iterator it_s32 = s3.begin();//效果等同auto
+
+    //cbegin与cend。无论对象本身如vector或string是否是const,这两个函数都返回const_iterator
+    auto it_s22 = s2.cbegin();
+//    *it_s22 = "HI";不允许，因为it_s22是const_iterator
+//    string::iterator it_s23 = s2.cbegin();不合规，因为cbegin返回的是const_iterator
 }
 
 void trail_vector(){
@@ -78,7 +86,53 @@ void trial_on_iter(){
 //    *it2_auto = 100;由于v2是const的，所以it2_auto也被定义为const的
 
 }
+//iter和指针都可以使用箭头运算符或解引用符加.访问的方式访问其指向对象(it用指向这个词可能不太合适)的成员,it->member等同于(*it).member
+void iter_arrow(){
+    vector<string>  v1 = {"welcome","to","Beijing"};
+    vector<string>::const_iterator it1 = v1.begin();//非const容器可以有const的iterator，从容器有cbegin、cend函数就可看出。但反过来不行
+    cout <<(*it1).empty()<<endl;
+    cout <<it1->empty()<<endl;
+}
+//迭代器的算术运算都指的是位置而言的(加减一个数值、两个同一个容器的迭代器比较大小或是否相等、两个同一个容器的迭代器相减)
+void iter_arithmetic(){
+    vector<string> v1 = {"Beijing","city","is","surrended","by","ring","roads","and","the","city","is","well","symmetrical"};
+    cout << "vector大小:" << v1.size() <<endl;
+    auto middle = v1.begin() + v1.size()/2;
+    cout << "中间的词是:"<<*middle <<endl;
+    auto start = v1.begin();
+    auto end = v1.end();
+    cout << (end >= start) << endl;
+    auto distance = end - start;//distance的类型名称叫作difference_type
+    cout << "end和start的距离是:" << distance<<endl;
+
+}
+void print_int_vector(vector<int> v){
+    cout << "vector的元素为:";
+    for(int i:v){
+        cout << i << " ";
+    }
+    cout << endl;
+}
+//使用数组初始化vector
+void initialize_vector_by_array(){
+    //编译器把数组名转为指向第一个元素的指针
+    int a[] = {1,2,3,4,5,6};
+    vector<int> v1(a+0,a+6);//两个参数分别为起始指针与结尾指针，前闭后开
+    print_int_vector(v1);
+    vector<int> v2(a+1,a+4);
+    print_int_vector(v2);
+}
 int main() {
-    trial_on_iter();
+    SetConsoleOutputCP(CP_UTF8);
+    Person person = Person("Qiang Li","China",20221180,22);
+    Person person2 = Person();
+    const Person person3 = Person();
+    person2.print_information();
+    access_person(person);
+    change_person(person,"EastWood",20220001,"USA",34);
+    person.print_information();
+    std::cout << person.get_nation_initial() <<endl;
+    std::cout << person.occupation <<endl;
+    std::cout << person.getDegree("doctor") <<endl;
     return 0;
 }

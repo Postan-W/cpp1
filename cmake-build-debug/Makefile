@@ -128,6 +128,54 @@ cpp1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp1.dir\build.make CMakeFiles/cpp1.dir/build
 .PHONY : cpp1/fast
 
+algorithm.obj: algorithm.cpp.obj
+.PHONY : algorithm.obj
+
+# target to build an object file
+algorithm.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp1.dir\build.make CMakeFiles/cpp1.dir/algorithm.cpp.obj
+.PHONY : algorithm.cpp.obj
+
+algorithm.i: algorithm.cpp.i
+.PHONY : algorithm.i
+
+# target to preprocess a source file
+algorithm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp1.dir\build.make CMakeFiles/cpp1.dir/algorithm.cpp.i
+.PHONY : algorithm.cpp.i
+
+algorithm.s: algorithm.cpp.s
+.PHONY : algorithm.s
+
+# target to generate assembly for a file
+algorithm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp1.dir\build.make CMakeFiles/cpp1.dir/algorithm.cpp.s
+.PHONY : algorithm.cpp.s
+
+function.obj: function.cpp.obj
+.PHONY : function.obj
+
+# target to build an object file
+function.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp1.dir\build.make CMakeFiles/cpp1.dir/function.cpp.obj
+.PHONY : function.cpp.obj
+
+function.i: function.cpp.i
+.PHONY : function.i
+
+# target to preprocess a source file
+function.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp1.dir\build.make CMakeFiles/cpp1.dir/function.cpp.i
+.PHONY : function.cpp.i
+
+function.s: function.cpp.s
+.PHONY : function.s
+
+# target to generate assembly for a file
+function.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp1.dir\build.make CMakeFiles/cpp1.dir/function.cpp.s
+.PHONY : function.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +209,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... cpp1
+	@echo ... algorithm.obj
+	@echo ... algorithm.i
+	@echo ... algorithm.s
+	@echo ... function.obj
+	@echo ... function.i
+	@echo ... function.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -80,6 +80,21 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/15216/Desktop/projects/C&amp;C++/cpp1/algorithm.cpp">
+			<Option target="cpp1"/>
+		</Unit>
+		<Unit filename="C:/Users/15216/Desktop/projects/C&amp;C++/cpp1/algorithm.h">
+			<Option target="cpp1"/>
+		</Unit>
+		<Unit filename="C:/Users/15216/Desktop/projects/C&amp;C++/cpp1/cpp_class.h">
+			<Option target="cpp1"/>
+		</Unit>
+		<Unit filename="C:/Users/15216/Desktop/projects/C&amp;C++/cpp1/function.cpp">
+			<Option target="cpp1"/>
+		</Unit>
+		<Unit filename="C:/Users/15216/Desktop/projects/C&amp;C++/cpp1/function.h">
+			<Option target="cpp1"/>
+		</Unit>
 		<Unit filename="C:/Users/15216/Desktop/projects/C&amp;C++/cpp1/main.cpp">
 			<Option target="cpp1"/>
 		</Unit>

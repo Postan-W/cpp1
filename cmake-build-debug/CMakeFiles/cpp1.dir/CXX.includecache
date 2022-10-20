@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/15216/Desktop/projects/C&C++/cpp1/algorithm.h
+vector
+-
+
+C:/Users/15216/Desktop/projects/C&C++/cpp1/cpp_class.h
+
+C:/Users/15216/Desktop/projects/C&C++/cpp1/function.h
+
 C:/Users/15216/Desktop/projects/C&C++/cpp1/main.cpp
 iostream
 -
@@ -13,4 +21,12 @@ vector
 -
 typeinfo
 -
+windows.h
+-
+algorithm.h
+C:/Users/15216/Desktop/projects/C&C++/cpp1/algorithm.h
+function.h
+C:/Users/15216/Desktop/projects/C&C++/cpp1/function.h
+cpp_class.h
+C:/Users/15216/Desktop/projects/C&C++/cpp1/cpp_class.h
 
