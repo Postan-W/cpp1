@@ -2,9 +2,10 @@
 #include<vector>
 #include<typeinfo>
 #include <windows.h>
-#include "algorithm.h"
+#include "local_algorithm.h"
 #include "function.h"
 #include "cpp_class.h"
+#include "class_oop.h"
 //引入命名空间中的名字，否则的话使用时要带上命名空间名，如std::cin
 using std::cin;
 using std::cout;
@@ -125,6 +126,8 @@ void initialize_vector_by_array(){
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     Person person = Person("Qiang Li","China",20221180,22);
+    Person person_temp = person;//使用默认的拷贝构造函数
+    person_temp.print_information();
     Person person2 = Person();
     const Person person3 = Person();
     person2.print_information();
@@ -134,5 +137,48 @@ int main() {
     std::cout << person.get_nation_initial() <<endl;
     std::cout << person.occupation <<endl;
     std::cout << person.getDegree("doctor") <<endl;
+    person.degree = "master";
+    std::cout << person.degree <<endl;
+    const Person person4 = Person();
+    person4.degree = "doctor";
+    std::cout << person4.degree <<endl;
+    Book book = Book();
+    book.setIsbn(20221121);
+    std::cout << book.isbn << endl;
+    Book book2 = Book("the moon and six pennies","Maugham",20221122,30);
+    book2.print_bookinfo();
+    Book book3 = book2;
+    cout << "book3的信息是:"<<std::ends;
+    book3.print_bookinfo();
+    Book book4 = Book(book3);
+    book4.print_bookinfo();
+    Book book5 = Book(12,book4);
+    AggregateClass ac = {"Peppy",11218526};
+    std::cout << "聚合类:" << std::endl << ac.name << "<>" << ac.number << std::endl;
+    std::cout << fibonacci_sequence(6) << endl;
+    io_trial();
+    vector<string> v_temp = {"I","love","China"};
+    string s_temp = "so much";
+    v_temp.push_back(s_temp);
+    s_temp.push_back('!');
+    cout << s_temp <<endl;
+    cout << *(v_temp.end()-1) << endl;
+    cout << v_temp.capacity() << endl;
+    stack_adoptor();
+    ImplicitClass implicit_class = 10;
+    cout << implicit_class.age << endl;
+//    ExplicitClass explicit_class = 10;不可行
+    Fruit fruit1 = Fruit("fruit_public","fruit_protected","fruit_private");
+    cout << fruit1.name_public <<endl;
+    Apple1 apple1 = Apple1();
+    cout << apple1.name <<endl;
+    cout << apple1.name_public << endl;//默认值，空
+    Apple2  apple2 = Apple2(10,10);
+    cout << apple2.width <<endl;
+//    cout << apple2.name_public << endl;因为是protected继承，所以name_public变成protected的了，不能在类外访问
+    cout << apple2.class_name <<endl;
+    int t1 = 10,t2 = 20;
+    Swap(t1,t2);
+    cout << "t1=" << t1 <<endl <<"t2=" << t2 <<endl;
     return 0;
 }

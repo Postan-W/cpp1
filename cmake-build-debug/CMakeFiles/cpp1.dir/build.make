@@ -78,18 +78,18 @@ CMakeFiles/cpp1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp1.dir/main.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\15216\Desktop\projects\C&C++\cpp1\main.cpp" -o CMakeFiles\cpp1.dir\main.cpp.s
 
-CMakeFiles/cpp1.dir/algorithm.cpp.obj: CMakeFiles/cpp1.dir/flags.make
-CMakeFiles/cpp1.dir/algorithm.cpp.obj: ../algorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\15216\Desktop\projects\C&C++\cpp1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cpp1.dir/algorithm.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cpp1.dir\algorithm.cpp.obj -c "C:\Users\15216\Desktop\projects\C&C++\cpp1\algorithm.cpp"
+CMakeFiles/cpp1.dir/local_algorithm.cpp.obj: CMakeFiles/cpp1.dir/flags.make
+CMakeFiles/cpp1.dir/local_algorithm.cpp.obj: ../local_algorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\15216\Desktop\projects\C&C++\cpp1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cpp1.dir/local_algorithm.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cpp1.dir\local_algorithm.cpp.obj -c "C:\Users\15216\Desktop\projects\C&C++\cpp1\local_algorithm.cpp"
 
-CMakeFiles/cpp1.dir/algorithm.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp1.dir/algorithm.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\15216\Desktop\projects\C&C++\cpp1\algorithm.cpp" > CMakeFiles\cpp1.dir\algorithm.cpp.i
+CMakeFiles/cpp1.dir/local_algorithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp1.dir/local_algorithm.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\15216\Desktop\projects\C&C++\cpp1\local_algorithm.cpp" > CMakeFiles\cpp1.dir\local_algorithm.cpp.i
 
-CMakeFiles/cpp1.dir/algorithm.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp1.dir/algorithm.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\15216\Desktop\projects\C&C++\cpp1\algorithm.cpp" -o CMakeFiles\cpp1.dir\algorithm.cpp.s
+CMakeFiles/cpp1.dir/local_algorithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp1.dir/local_algorithm.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\15216\Desktop\projects\C&C++\cpp1\local_algorithm.cpp" -o CMakeFiles\cpp1.dir\local_algorithm.cpp.s
 
 CMakeFiles/cpp1.dir/function.cpp.obj: CMakeFiles/cpp1.dir/flags.make
 CMakeFiles/cpp1.dir/function.cpp.obj: ../function.cpp
@@ -107,14 +107,14 @@ CMakeFiles/cpp1.dir/function.cpp.s: cmake_force
 # Object files for target cpp1
 cpp1_OBJECTS = \
 "CMakeFiles/cpp1.dir/main.cpp.obj" \
-"CMakeFiles/cpp1.dir/algorithm.cpp.obj" \
+"CMakeFiles/cpp1.dir/local_algorithm.cpp.obj" \
 "CMakeFiles/cpp1.dir/function.cpp.obj"
 
 # External object files for target cpp1
 cpp1_EXTERNAL_OBJECTS =
 
 cpp1.exe: CMakeFiles/cpp1.dir/main.cpp.obj
-cpp1.exe: CMakeFiles/cpp1.dir/algorithm.cpp.obj
+cpp1.exe: CMakeFiles/cpp1.dir/local_algorithm.cpp.obj
 cpp1.exe: CMakeFiles/cpp1.dir/function.cpp.obj
 cpp1.exe: CMakeFiles/cpp1.dir/build.make
 cpp1.exe: CMakeFiles/cpp1.dir/linklibs.rsp
