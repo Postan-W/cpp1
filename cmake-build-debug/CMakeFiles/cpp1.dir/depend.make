@@ -12,4 +12,5 @@ CMakeFiles/cpp1.dir/main.cpp.obj: \
  ../cpp_class.h \
  ../function.h \
  ../local_algorithm.h \
- ../main.cpp
+ ../main.cpp \
+ ../namespace_trial.h

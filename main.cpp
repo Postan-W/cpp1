@@ -6,6 +6,8 @@
 #include "function.h"
 #include "cpp_class.h"
 #include "class_oop.h"
+#include "namespace_trial.h"
+
 //引入命名空间中的名字，否则的话使用时要带上命名空间名，如std::cin
 using std::cin;
 using std::cout;
@@ -180,5 +182,13 @@ int main() {
     int t1 = 10,t2 = 20;
     Swap(t1,t2);
     cout << "t1=" << t1 <<endl <<"t2=" << t2 <<endl;
+    using namespace int_set;
+    int a = 999;
+    cout << "using编译指令离得远些，就近原则使用最近定义的a:" <<a << endl;
+    cout << "这里是名称空间string_set::int_set中的e:" <<string_set::int_set::e << endl;
+    using function_namespace::function;
+    function();
+    function(100);
+    function(200,300);
     return 0;
 }

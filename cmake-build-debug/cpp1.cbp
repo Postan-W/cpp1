@@ -101,6 +101,9 @@
 		<Unit filename="C:/Users/15216/Desktop/projects/C&amp;C++/cpp1/main.cpp">
 			<Option target="cpp1"/>
 		</Unit>
+		<Unit filename="C:/Users/15216/Desktop/projects/C&amp;C++/cpp1/namespace_trial.h">
+			<Option target="cpp1"/>
+		</Unit>
 		<Unit filename="C:/Users/15216/Desktop/projects/C&amp;C++/cpp1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
